@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro id="1">
+        <titulo>Don Quijote de la Mancha</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <precio>19.95</precio>
+    </libro>
+    <libro id="2">
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <precio>22.50</precio>
+    </libro>
+    <libro id="3">
+        <titulo>El principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <precio>12.00</precio>
+    </libro>
+</biblioteca>

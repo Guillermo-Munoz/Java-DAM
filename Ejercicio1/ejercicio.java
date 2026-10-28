@@ -1,6 +1,7 @@
 package Ejercicio9;
 import java.xml.parsers.*;
 
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -16,7 +17,7 @@ public class ejercicio {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
             //Creamos el analizador que nos permitirá leer el documento xml
-            DocumentrBuilder analizador = factory.newDocumentBuilder();
+            DocumentBuilder analizador = factory.newDocumentBuilder();
 
             //Leemos el documento xml y lo guardamos en memoria
             Document documento = analizador.parse("libros.xml");
@@ -49,8 +50,9 @@ public class ejercicio {
 
                     System.out.println("_____________________________");
                     System.out.println("ID: " + id);
-                    System.err.println("Autot: " + autor);
-                    System.out.println("Precioi: " + precio);
+                    System.out.println("Título: " + titulo);
+                    System.out.println("Autor: " + autor);
+                    System.out.println("Precio: " + precio);
                 }
             }
 
