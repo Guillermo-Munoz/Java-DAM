@@ -1,13 +1,11 @@
-package Ejercicio9;
-import java.xml.parsers.*;
-
+package Ejercicio1;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-import java.nio.file.Paths;
+
 
 public class ejercicio {
     public static void main(String[] args) {

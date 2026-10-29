@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa>
+    <empleado>
+        <id>101</id>
+        <nombre>Ana Pérez</nombre>
+        <departamento>Finanzas</departamento>
+        <salario>3000.00</salario>
+    </empleado>
+    <empleado>
+        <id>102</id>
+        <nombre>Juan Martínez</nombre>
+        <departamento>IT</departamento>
+        <salario>4000.00</salario>
+    </empleado>
+    <empleado>
+        <id>103</id>
+        <nombre>Lucía Gómez</nombre>
+        <departamento>Marketing</departamento>
+        <salario>3200.00</salario>
+    </empleado>
+</empresa>
