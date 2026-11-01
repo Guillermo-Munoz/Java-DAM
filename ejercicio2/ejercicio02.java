@@ -1,4 +1,4 @@
-package ejercicio2;
+package Ejercicio2;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

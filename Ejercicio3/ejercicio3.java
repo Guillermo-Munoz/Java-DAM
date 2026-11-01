@@ -52,10 +52,11 @@ public class ejercicio3 {
             List<String> productosAgotados = new ArrayList<>();
             String productoMasCaro = "";
             double precioProductoMasCaro = 0;
-            String reglaFormato = "| %-2s | %-20.20s | %-18.18s | %5d | %11d |%n";
-            String reglaFormatoCabecera = "| %-3s | %-20.20s | %-18.18s | %5.5s | %11.11s |%n";
-            String cabeceraColumnas = String.format(reglaFormatoCabecera, "id",  "nombre", "categoria", "stock", "stockMinimo");
-            int anchoLinea = 74;
+            String reglaFormato = "| %-2s | %-20.20s | %-18.18s | %5d | %11d | %8.2f |%n";
+            String reglaFormatoCabecera = "| %-3s | %-20.20s | %-18.18s | %5.5s | %11.11s | %8.8s |%n";
+            String reglaFormatoSeparador = "+ %-3.3s + %-20.20s + %-18.18s + %5.5s + %11.11s + %8.8s +%n";
+            String cabeceraColumnas = String.format(reglaFormatoCabecera, "id",  "nombre", "categoria", "stock", "stockMinimo", "precio/Uni");
+            int anchoLinea = 85;
             
             // Recorre la lista de productos una sola vez
             for(int i = 0 ; i < productos.getLength(); i++){
@@ -98,51 +99,58 @@ public class ejercicio3 {
                      */
                     // Guarda la estructura/regla en una variable
                     
-                    productosReponer.add(String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo));
+                    productosReponer.add(String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo, precio));
                 }
                 // Guarda los productos agotados
                 if(stock == 0){
                     
-                    productosAgotados.add(String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo));
+                    productosAgotados.add(String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo, precio));
                 }
                 // Guarda el producto mas caro que valla econtrando
                 if(precio > precioProductoMasCaro){
                     
-                    productoMasCaro = String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo);
+                    productoMasCaro = String.format(reglaFormato, id,  nombre, categoria, stock, stockMinimo, precio);
                 }
             }
 
-            // Mostrar resultados por consola
-            
+            // MOSTRAR RESULTADOS EN PANTALLA
             String titulo1 = "SYSTEMA DE INVENTARIO: INFORME ";
             String titulo2 = "PRODUCTOS PARA REPONER ";
             String titulo3 = "PRODUCTOS AGOTADOS ";
             String titulo4 = "PRODUCTO MAS CARO";
             System.out.printf("%s%n", "-".repeat(anchoLinea));
+
+            // SYSTEMA DE INVENTARIO INFORME
             int gionesLado = (anchoLinea - titulo1.length() - 2) / 2;
             System.out.printf("%s %s %s%n", "-".repeat(gionesLado), titulo1, "-".repeat(gionesLado));
             System.out.printf("%n");
             System.out.printf("Valor total del inventario: " + valorInventario + "%n%n");
+
+            // PRODUCTOS PARA REPONER
             gionesLado = (anchoLinea - titulo2.length() - 2) / 2;
             System.out.printf("%s %s %s%n", "-".repeat(gionesLado), titulo2, "-".repeat(gionesLado));
             System.out.printf(cabeceraColumnas);
-            System.out.printf(reglaFormatoCabecera, "---",  "-------------------------", "----------------------", "-----------------", "-----------------------");
+            System.out.printf(reglaFormatoSeparador, "-".repeat(3), "-".repeat(20), "-".repeat(18), "-".repeat(5), "-".repeat(11), "-".repeat(8));
             for (String producto : productosReponer) {
                 System.out.printf(producto);  
             }
             System.out.println("");
+
+            // PRODUCTOS AGOTADOS
             gionesLado = (anchoLinea - titulo3.length() - 2) / 2;
             System.out.printf("%s %s %s%n", "-".repeat(gionesLado), titulo3, "-".repeat(gionesLado));
             System.out.printf(cabeceraColumnas);
-            System.out.printf(reglaFormatoCabecera, "---",  "-------------------------", "----------------------", "-----------------", "-----------------------");
+            System.out.printf(reglaFormatoSeparador, "-".repeat(3), "-".repeat(20), "-".repeat(18), "-".repeat(5), "-".repeat(11), "-".repeat(8));
             for (String producto : productosAgotados) {
-                System.out.printf(producto);
+            System.out.printf(producto);
             }
             System.out.println("");
+
+            // PRODUCTO MAS CARO
             gionesLado = (anchoLinea - titulo4.length() - 2) / 2;
             System.out.printf("%s %s %s%n", "-".repeat(gionesLado), titulo4, "-".repeat(gionesLado));
             System.out.printf(cabeceraColumnas);
-            System.out.printf(reglaFormatoCabecera, "---",  "-------------------------", "----------------------", "-----------------", "-----------------------");
+            System.out.printf(reglaFormatoSeparador, "-".repeat(3), "-".repeat(20), "-".repeat(18), "-".repeat(5), "-".repeat(11), "-".repeat(8));
             System.out.printf(productoMasCaro);
             System.out.printf("%s%n", "-".repeat(anchoLinea));
 
