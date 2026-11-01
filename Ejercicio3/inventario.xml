@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario>
+
+    <!-- Productos de la tienda -->
+    <producto>
+        <id>101</id>
+        <nombre>Teclado Logitech</nombre>
+        <categoria>Perifericos</categoria>
+        <precio>29.90</precio>
+        <stock>12</stock>
+        <stockMinimo>5</stockMinimo>
+    </producto>
+
+    <producto>
+        <id>102</id>
+        <nombre>Raton inalambrico</nombre>
+        <categoria>Perifericos</categoria>
+        <precio>15.50</precio>
+        <stock>3</stock>
+        <stockMinimo>8</stockMinimo>
+    </producto>
+
+    <producto>
+        <id>103</id>
+        <nombre>Monitor Samsung</nombre>
+        <categoria>Monitores</categoria>
+        <precio>189.00</precio>
+        <stock>4</stock>
+        <stockMinimo>3</stockMinimo>
+    </producto>
+
+    <producto>
+        <id>104</id>
+        <nombre>Memoria USB 64GB</nombre>
+        <categoria>Almacenamiento</categoria>
+        <precio>9.90</precio>
+        <stock>0</stock>
+        <stockMinimo>10</stockMinimo>
+    </producto>
+
+    <producto>
+        <id>105</id>
+        <nombre>Webcam HD</nombre>
+        <categoria>Perifericos</categoria>
+        <precio>49.00</precio>
+        <stock>2</stock>
+        <stockMinimo>4</stockMinimo>
+    </producto>
+
+</inventario>
